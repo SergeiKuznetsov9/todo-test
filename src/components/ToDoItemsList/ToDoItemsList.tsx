@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Typography } from "@mui/material";
 import { TodoListContext } from "../../context/toDoListContext";
 import { ToDoItem } from "../ToDoItem/ToDoItem";
 import { TodoListContextType } from "../../types/types";
@@ -14,15 +15,22 @@ export const ToDoItemsList = () => {
 
   return (
     <>
-    <p>{toDoItemsList.length} items left</p>
-      {toDoItemsListFiltered.length ? toDoItemsListFiltered.map((toDoItem) => (
-        <ToDoItem
-          id={toDoItem.id}
-          content={toDoItem.content}
-          isActive={toDoItem.isActive}
-          key={toDoItem.id}
-        />
-      )) : <div>You have no {ViewModeText[viewMode]} tasks</div>}
+      <Typography variant="body1">{toDoItemsList.length} items left</Typography>
+
+      {toDoItemsListFiltered.length ? (
+        toDoItemsListFiltered.map((toDoItem) => (
+          <ToDoItem
+            id={toDoItem.id}
+            content={toDoItem.content}
+            isActive={toDoItem.isActive}
+            key={toDoItem.id}
+          />
+        ))
+      ) : (
+        <Typography variant="body1">
+          You have no {ViewModeText[viewMode]} tasks
+        </Typography>
+      )}
     </>
   );
 };

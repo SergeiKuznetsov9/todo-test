@@ -1,3 +1,12 @@
+.ToDoItem {
+    min-height: 32px;
+    margin-bottom: 8px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .finishedItem {
     text-decoration: line-through;
     color: grey;

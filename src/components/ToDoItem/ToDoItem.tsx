@@ -1,4 +1,7 @@
 import { ChangeEvent, useContext } from "react";
+import { Paper } from "@mui/material";
+import { Checkbox } from "@mui/material";
+
 import { TodoListContext } from "../../context/toDoListContext";
 import { ToDoListActionTypes, TodoListContextType } from "../../types/types";
 import cls from "./ToDoItem.module.css";
@@ -20,9 +23,9 @@ export const ToDoItem = ({ id, content, isActive }: ToDoItemProps) => {
   };
 
   return (
-    <div className={cls.ToDoItem}>
-      <input type="checkbox" checked={!isActive} onChange={onChangeStatus} />
+    <Paper elevation={3} className={cls.ToDoItem}>
+      <Checkbox checked={!isActive} onChange={onChangeStatus} color="success" />
       <span className={`${!isActive && cls.finishedItem}`}>{content}</span>
-    </div>
+    </Paper>
   );
 };
