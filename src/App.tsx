@@ -1,11 +1,17 @@
-import './App.css';
+import {Typography} from '@mui/material';
+import { TodoProvider } from "./context/toDoListProvider";
+import { NewItemInput } from "./components/NewItemInput/NewItemInput";
+import { ToDoItemsFilters } from "./components/ToDoItemsFilters/ToDoItemsFilters";
+import { ToDoItemsList } from "./components/ToDoItemsList/ToDoItemsList";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      Hello World!
-    </div>
-  );
-}
+const App = () => (
+  <TodoProvider>
+    <Typography variant="h1" align='center'>todos</Typography>
+    <NewItemInput />
+    <ToDoItemsFilters />
+    <ToDoItemsList />
+  </TodoProvider>
+);
 
 export default App;

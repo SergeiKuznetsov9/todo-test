@@ -1,0 +1,15 @@
+.NewItemInput {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.todoInput {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.submitButton {
+    width: 208px;
+}
