@@ -1,6 +1,6 @@
 import { ToDoItemType } from "../types/types";
 
-export const ToDoItemsList: ToDoItemType[] = [
+export const ToDoItemsListData: ToDoItemType[] = [
   {
     id: "1",
     content: "Изучить открытые вакансии на HH",
@@ -9,12 +9,12 @@ export const ToDoItemsList: ToDoItemType[] = [
   {
     id: "2",
     content: "Составить подборку релевантных вакансий",
-    isActive: false,
+    isActive: true,
   },
   {
     id: "3",
     content: "Выполнить тестовые задания",
-    isActive: true,
+    isActive: false,
   },
   {
     id: "4",

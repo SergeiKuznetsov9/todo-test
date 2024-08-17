@@ -18,6 +18,10 @@ export const NewItemInput = () => {
   };
 
   const onCreateItem = (id: string, content: string) => {
+    if (content === "") {
+      return;
+    }
+
     dispatch({
       type: ToDoListActionTypes.ADD_TODO_ITEM,
       payload: { id, content },

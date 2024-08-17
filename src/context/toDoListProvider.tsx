@@ -1,7 +1,7 @@
 import { ReactNode, useReducer } from "react";
 import { TodoListContext } from "./toDoListContext";
 import { toDoListReducer } from "../reducers/toDoListReducer";
-import { ToDoItemsList } from "../mockData/mockData";
+import { ToDoItemsListData } from "../mockData/mockData";
 import { ViewMode } from "../types/types";
 
 interface TodoListProviderProps {
@@ -10,7 +10,7 @@ interface TodoListProviderProps {
 
 export const TodoProvider = ({ children }: TodoListProviderProps) => {
   const [toDoItemsState, dispatch] = useReducer(toDoListReducer, {
-    toDoItemsList: ToDoItemsList,
+    toDoItemsList: ToDoItemsListData,
     viewMode: ViewMode.ALL,
   });
 
