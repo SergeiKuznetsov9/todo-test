@@ -1,11 +1,15 @@
-import './App.css';
+import { TodoProvider } from "./context/toDoListProvider";
+import { NewItemInput } from "./components/NewItemInput/NewItemInput";
+import { ToDoItemsFilters } from "./components/ToDoItemsFilters/ToDoItemsFilters";
+import { ToDoItemsList } from "./components/ToDoItemsList/ToDoItemsList";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      Hello World!
-    </div>
-  );
-}
+const App = () => (
+  <TodoProvider>
+    <NewItemInput />
+    <ToDoItemsFilters />
+    <ToDoItemsList />
+  </TodoProvider>
+);
 
 export default App;
